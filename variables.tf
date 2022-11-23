@@ -6,7 +6,7 @@ variable "aws_region" {
 variable "bucket_prefix" {
     type        = string
     description = "Creates a unique bucket name beginning with the specified prefix."
-    default     = "eFuse_s3bucket-"
+    default     = "efusebucket-"
 }
 
 variable "tags" {
