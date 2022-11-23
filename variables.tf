@@ -10,7 +10,7 @@ variable "bucket_prefix" {
 }
 
 variable "tags" {
-    type        = amuqit
+    type        = map
     description = "A mapping of tags to assign to the bucket."
     default     = {
         environment = "DEV"
