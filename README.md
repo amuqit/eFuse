@@ -2,7 +2,7 @@
 
 
 **Part 1 and 2:**
-Prereq: 
+- Prereq: 
 1. Install Jenkins agent on EC2 servers.
 2. Attach Admin IAM role to EC2 server - for ease of use. Not recommended for general use!
 3. Installed Git, AWS CLI, eksctl, Kubectl and Terraform - one time setup.
