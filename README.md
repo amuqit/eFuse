@@ -12,8 +12,10 @@ Solution: Creates EKS clsuter using series of eksctl and kubectl commands.
 Deploys 2 sample applications (2048 game and Nginx server) with ALB ingress controller.
 
 
-Part 3:
 
+Part 3:
+1: Set-up Jenkins Agent same as above
+2: Trigger pipeline using the Jenkins file provided in /Part3.
 
 
    
