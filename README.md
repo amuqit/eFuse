@@ -1,12 +1,20 @@
 # eFuse
 
 
-Plan and Execution: 
-
-1: Install Jenkins on EC2 - linux server  (One time manual setup)
-2: Using the Jenkins Dashboard (EC2) - create a Jenkins Job to pick the JenkinsFile from the repo
-    Added Pre-reqs: Installed Git, AWS CLI, Terraform and HELM - One time solution.
+Part 1 and 2:
+Prereq: 
+1: Install Jenkins agent on EC2 servers.
+2: Attach Admin IAM role to EC2 server - for ease of use. Not recommended for general use!
+3: Installed Git, AWS CLI, eksctl, Kubectl and Terraform - one time setup.
+4: Using the Jenkins Dashboard (EC2) - create a Jenkins Job to pick the JenkinsFile from the repo
     
-3: Jenkinsfile - will trigger EKS cluster creation using AWS provided Terraform Template
-4: Install NGINX ingress controller - on one node
+Solution: Creates EKS clsuter using series of eksctl and kubectl commands. 
+Deploys 2 sample applications (2048 game and Nginx server) with ALB ingress controller.
+
+
+Part 3:
+
+
+
+   
 
