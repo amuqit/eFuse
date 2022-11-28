@@ -7,26 +7,11 @@ pipeline {
                 echo 'Hello World'
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/aws-ia/terraform-aws-eks-blueprints.git']]])
                         }}
-        stage ('Terraform provision') {
+        stage ('Running Kubectl command') {
             steps {
                 sh """
-                    cd examples/eks-cluster-with-new-vpc/
-                    terraform init
-                    export AWS_REGION=us-west-2
-                    terraform plan
-                    terraform apply --auto-approve
+                    sh 'kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-controller/v1.1.4/docs/examples/rbac-role.yaml'
                 """
-            }
-        }
-        stage ('License to Kill?') {
-            steps {
-                input message: 'Destroy terraform resources?'
-            }
-        }
-        stage ('Search and Destroy') {
-            steps {
-                sh 'cd examples/eks-cluster-with-new-vpc/; terraform destroy --auto-approve'
-                
             }
         }
     }
