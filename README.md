@@ -17,6 +17,8 @@ Part 3:
 1: Set-up Jenkins Agent same as above
 2: Trigger pipeline using the Jenkins file provided in /Part3.
 
+Solution: Creates a S3 bucket and IAM user with specific access/control policies for S3 that was created.
+
 
    
 
