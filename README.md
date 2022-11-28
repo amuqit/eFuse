@@ -1,7 +1,7 @@
 # eFuse
 
 
-Part 1 and 2:
+**Part 1 and 2:**
 - Prereq: 
 1. Install Jenkins agent on EC2 servers.
 2. Attach Admin IAM role to EC2 server - for ease of use. Not recommended for general use!
@@ -13,7 +13,7 @@ Deploys 2 sample applications (2048 game and Nginx server) with ALB ingress cont
 
 
 
-Part 3:
+**Part 3:**
 1. Set-up Jenkins Agent same as above
 2. Trigger pipeline using the Jenkins file provided in /Part3.
 
