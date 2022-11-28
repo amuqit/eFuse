@@ -1,0 +1,23 @@
+#apiVersion: extensions/v1beta1 - depricated 
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: "2048-ingress"
+  namespace: "2048-game"
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+  labels:
+    app: final-ingress
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /whoami/
+            backend:
+              serviceName: "service-2048"
+              servicePort: 80
+          - path: /*
+            backend:
+              serviceName: "service-nginx"
+              servicePort: 80
